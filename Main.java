@@ -7,7 +7,7 @@ public class Main
    // Complete the code below
    
    // TODO: Create Airplane 1 and 2
-   Airplane airplane1 = new Airplane("AAA01", 1, 0, 0);
+   Airplane airplane1 = new Airplane();
    Airplane airplane2 = new Airplane("AAA02", 15.8, 128, 30000);
    
    // TODO: Create a Scanner
@@ -39,24 +39,33 @@ public class Main
    
    // TODO: Print initial height differences
    System.out.println("\nInitial Height Differences:");
-   System.out.println("The difference in height between Airplane 1 and Airplane 2 is " + (airplane1.getAlt() - airplane2.getAlt()));
-   System.out.println("The difference in height between Airplane 1 and Airplane 3 is " + (airplane1.getAlt() - airplane3.getAlt()));
-   System.out.println("The difference in height between Airplane 2 and Airplane 3 is " + (airplane2.getAlt() - airplane3.getAlt()));
+   System.out.println("The difference in height between Airplane 1 and Airplane 2 is " + Math.abs((airplane1.getAlt() - airplane2.getAlt())));
+   System.out.println("The difference in height between Airplane 1 and Airplane 3 is " + Math.abs((airplane1.getAlt() - airplane3.getAlt())));
+   System.out.println("The difference in height between Airplane 2 and Airplane 3 is " + Math.abs((airplane2.getAlt() - airplane3.getAlt())));
    
    // TODO: Airplane 1 changes
    airplane1.move((airplane2.distTo(airplane3)), 65);
+   airplane1.gainAlt();
+   airplane1.gainAlt();
+   airplane1.gainAlt();
 
    // TODO: Airplane 2 changes
    airplane2.move(8.0, 135);
+   airplane2.loseAlt();
+   airplane2.loseAlt();
 
    // TODO: Airplane 3 changes
    airplane3.move(5.0, 55);
+   airplane3.loseAlt();
+   airplane3.loseAlt();
+   airplane3.loseAlt();
+   airplane3.loseAlt();
 
    // TODO: Print new positions of airplanes
    System.out.println("\nNew Positions: ");
-   System.out.println(airplane1.toString());
-   System.out.println(airplane2.toString());
-   System.out.println(airplane3.toString());
+   System.out.println("Airplane 1: " + airplane1.toString());
+   System.out.println("Airplane 2: " + airplane2.toString());
+   System.out.println("Airplane 3: " + airplane3.toString());
 
    // TODO: Print new distances between airplanes
    System.out.println("\nNew Distances:");
@@ -66,8 +75,8 @@ public class Main
    
    // TODO: Print new heights between airplanes
    System.out.println("\nNew Height Differences:");
-   System.out.println("The difference in height between Airplane 1 and Airplane 2 is " + (airplane1.getAlt() - airplane2.getAlt()));
-   System.out.println("The difference in height between Airplane 1 and Airplane 3 is " + (airplane1.getAlt() - airplane3.getAlt()));
-   System.out.println("The difference in height between Airplane 2 and Airplane 3 is " + (airplane2.getAlt() - airplane3.getAlt()));
+   System.out.println("The difference in height between Airplane 1 and Airplane 2 is " + Math.abs((airplane1.getAlt() - airplane2.getAlt())));
+   System.out.println("The difference in height between Airplane 1 and Airplane 3 is " + Math.abs((airplane1.getAlt() - airplane3.getAlt())));
+   System.out.println("The difference in height between Airplane 2 and Airplane 3 is " + Math.abs((airplane2.getAlt() - airplane3.getAlt())));
   }
 }
